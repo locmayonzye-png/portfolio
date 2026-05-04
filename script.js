@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("year").textContent = new Date().getFullYear();
 
   /* TYPEWRITER */
-  const words = ["Developer", "Student", "Designer", "Freelancer"];
+  const words = ["Developer", "Student", "Designer", "Freelancer", "Gamer", "Binge Watcher", "Music Lover"];
   let i = 0, j = 0, deleting = false;
   const typed = document.getElementById("typed");
 

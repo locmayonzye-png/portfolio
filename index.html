@@ -10,209 +10,493 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-  <h2 class="logo">Zyemon Locmayon</h2>
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#hobbies">Hobbies</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#business">Business</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <h2 class="logo">Zyemon Locmayon</h2>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#business">Business</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-container">
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Zyemon Locmayon</span></h1>
+        <h3><span id="typed"></span></h3>
+        <p>I am a beginner developer building modern web solutions.</p>
+        <br>
+        <p>Please follow my facebook page below 😉</p>
+      </div>
 
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Zyemon Locmayon</span></h1>
-      <h3><span id="typed"></span></h3>
-      <p>I am a beginner developer building modern web solutions.</p>
-      <br>
-      <p>Please follow my facebook page below 😉</p>
+      <div class="photo-wrap">
+        <img src="IMAGES/Untitled design (3).png" alt="My Photo">
+      </div>
     </div>
+  </section>
 
-    <div class="photo-wrap">
-      <img src="IMAGES/Untitled design (3).png" alt="My Photo">
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      
+      <div class="about-text">
+        <p>I am a <strong>BSIT student</strong> passionate about technology and development. I aspire to one day be able to create innovative solutions that make a positive impact on modern society.</p>
+        <br>
+        <p>I was born and raised in <strong>Balamban, Cebu</strong>. I am an altar server who has been in the community for over a decade.</p>
+        <br>
+        <p>I play a lot of games, especially when my friends tell me to play with them.</p>
+      </div>
+
+      <div class="about-image">
+        <!-- Replace 'about-me.png' with your actual image file name -->
+        <img src="IMAGES/Untitled design (3).png" alt="Zyemon in Balamban">
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid hobby-grid">
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="about-container">
-    <p>I am a <strong>BSIT student</strong> passionate about technology and development. I aspire to one day be able to create innovative solutions that make a positive impact to the modern society.</p>
-    <br>
-    <p>I was born and raised in <strong>Balamban, Cebu. I am an altar server who has been in the community for over a decade.</strong>.</p>
-    <br>
-    <p>I play a lot of game, especially when my friends tells me to play with them.</p>
-  </div>
-</section>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>College</span>
+          </div>
+          <div class="flip-back edu-back">
+            <p class="edu-school">Cebu Institute of Technology - University</p>
+            <p class="edu-course">Bachelor of Science in Information Technology</p>
+            <p class="edu-year">2025 – Present</p>
+          </div>
+        </div>
+      </div>
 
-<!-- HOBBIES (CLICKABLE MEANINGS) -->
-<section id="hobbies">
-  <h2>Hobbies</h2>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Senior High School</span>
+          </div>
+          <div class="flip-back edu-back">
+            <p class="edu-school">University of San Jose - Recoletos Balamban Campus</p>
+            <p class="edu-course">Science, Technology, Engineering, and Mathematics (STEM) Strand</p>
+            <p class="edu-year">2019 – 2024</p>
+          </div>
+        </div>
+      </div>
 
-  <div class="grid">
+    </div>
+  </section>
 
-    <a class="card hobby" href="https://www.merriam-webster.com/dictionary/gaming" target="_blank">
-      <h3>Gaming</h3>
-      <p>Click to view meaning</p>
-    </a>
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
 
-    <a class="card hobby" href="https://www.merriam-webster.com/dictionary/binge-watch" target="_blank">
-      <h3>Binge Watching</h3>
-      <p>Click to view meaning</p>
-    </a>
+      <!-- Web Development flip card -->
+      <div class="flip-card skill-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Web Development</span>
+          </div>
+          <div class="flip-back skill-flip-back">
+            <h3>Web Development</h3>
+            <p>HTML</p>
+            <div class="bar"><div class="fill html">70%</div></div>
+            <p>CSS</p>
+            <div class="bar"><div class="fill css">40%</div></div>
+            <p>JavaScript</p>
+            <div class="bar"><div class="fill js">30%</div></div>
+          </div>
+        </div>
+      </div>
 
-    <a class="card hobby" href="https://www.merriam-webster.com/dictionary/read" target="_blank">
-      <h3>Reading</h3>
-      <p>Click to view meaning</p>
-    </a>
+      <!-- Programming Languages flip card -->
+      <div class="flip-card skill-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Programming Languages</span>
+          </div>
+          <div class="flip-back skill-flip-back">
+            <h3>Programming Languages</h3>
+            <p>C Language</p>
+            <div class="bar"><div class="fill c">40%</div></div>
+          </div>
+        </div>
+      </div>
 
-    <a class="card hobby" href="https://www.collinsdictionary.com/dictionary/english/listen-to-music" target="_blank">
-      <h3>Listening to Music</h3>
-      <p>Click to view meaning</p>
-    </a>
+    </div>
+  </section>
 
-    <a class="card hobby" href="https://www.merriam-webster.com/dictionary/volleyball" target="_blank">
-      <h3>Volleyball</h3>
-      <p>Click to view meaning</p>
-    </a>
+  <!-- HOBBIES -->
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="grid hobby-grid">
 
-    <a class="card hobby" href="https://www.merriam-webster.com/dictionary/jog" target="_blank">
-      <h3>Jogging</h3>
-      <p>Click to view meaning</p>
-    </a>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Gaming</span>
+          </div>
+          <div class="flip-back">
+            I play games as a way to relax, have fun, and connect with friends while improving my strategic thinking and problem-solving skills.
+          </div>
+        </div>
+      </div>
 
-    <a class="card hobby" href="https://www.merriam-webster.com/dictionary/sleep" target="_blank">
-      <h3>Sleeping</h3>
-      <p>Click to view meaning</p>
-    </a>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Binge Watching</span>
+          </div>
+          <div class="flip-back">
+            I watch series and tv shows to unwind, enjoy storytelling, and stay entertained during my free time.
+          </div>
+        </div>
+      </div>
 
-  </div>
-</section>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Reading</span>
+          </div>
+          <div class="flip-back">
+            I read manwhas and mangas to entertain myself, explore new worlds, and enjoy captivating stories during my leisure time.
+          </div>
+        </div>
+      </div>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Music</span>
+          </div>
+          <div class="flip-back">
+            Music helps me relax, focus, and stay motivated while being busy with my daily activities and projects.
+          </div>
+        </div>
+      </div>
 
-  <div class="grid">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Volleyball</span>
+          </div>
+          <div class="flip-back">
+            I love playing volleyball as it is my comfort sport, helps me stay active, and allows me to bond with friends while improving my teamwork and coordination skills.
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-1-blond.vercel.app" target="_blank">
-      <img src="IMAGES/activity1.png">
-      <h3>Activity 1</h3>
-    </a>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Jogging</span>
+          </div>
+          <div class="flip-back">
+            Jogging keeps me healthy, active, and improves my endurance and mental clarity.
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-2-zeta.vercel.app" target="_blank">
-      <img src="IMAGES/activity2.png">
-      <h3>Activity 2</h3>
-    </a>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon"></span>
+            <span>Sleeping</span>
+          </div>
+          <div class="flip-back">
+            Rest is important for recovery, focus, memory, and maintaining productivity every day.
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-3-green.vercel.app" target="_blank">
-      <img src="IMAGES/activity3.png">
-      <h3>Activity 3</h3>
-    </a>
+    </div>
+  </section>
 
-    <a class="project-card card" href="https://activity-4-m62x.vercel.app" target="_blank">
-      <img src="IMAGES/activity4.png">
-      <h3>Activity 4</h3>
-    </a>
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="grid">
 
-    <a class="project-card card" href="https://activity-4v2-rd3z.vercel.app" target="_blank">
-      <img src="IMAGES/activity4v2.png">
-      <h3>Activity 4 v2</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">01</span>
+            <h3>Activity 1</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity1.png" alt="Activity 1">
+            <div class="project-overlay">
+              <a href="https://activity-1-blond.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-5-rho.vercel.app" target="_blank">
-      <img src="IMAGES/activity5.png">
-      <h3>Activity 5</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">02</span>
+            <h3>Activity 2</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity2.png" alt="Activity 2">
+            <div class="project-overlay">
+              <a href="https://activity-2-zeta.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-5v2.vercel.app" target="_blank">
-      <img src="IMAGES/activity5v2.png">
-      <h3>Activity 5 v2</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">03</span>
+            <h3>Activity 3</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity3.png" alt="Activity 3">
+            <div class="project-overlay">
+              <a href="https://activity-3-green.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://key-labs-rho.vercel.app" target="_blank">
-      <img src="IMAGES/keylab.png">
-      <h3>Key Labs</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">04</span>
+            <h3>Activity 4</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity4.png" alt="Activity 4">
+            <div class="project-overlay">
+              <a href="https://activity-4-m62x.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-7-three-theta.vercel.app" target="_blank">
-      <img src="IMAGES/activity7.png">
-      <h3>Activity 7</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">05</span>
+            <h3>Activity 4 v2</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity4v2.png" alt="Activity 4 v2">
+            <div class="project-overlay">
+              <a href="https://activity-4v2-rd3z.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-8-nu.vercel.app" target="_blank">
-      <img src="IMAGES/activity8.png">
-      <h3>Activity 8</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">06</span>
+            <h3>Activity 5</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity5.png" alt="Activity 5">
+            <div class="project-overlay">
+              <a href="https://activity-5-rho.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-9-sable.vercel.app" target="_blank">
-      <img src="IMAGES/activity9.png">
-      <h3>Activity 9</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">07</span>
+            <h3>Activity 5 v2</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity5v2.png" alt="Activity 5 v2">
+            <div class="project-overlay">
+              <a href="https://activity-5v2.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-10-ecru.vercel.app" target="_blank">
-      <img src="IMAGES/activity10.png">
-      <h3>Activity 10</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">08</span>
+            <h3>Business Website</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/keylab.png" alt="Key Labs">
+            <div class="project-overlay">
+              <a href="https://key-labs-rho.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="project-card card" href="https://activity-11-pied.vercel.app" target="_blank">
-      <img src="IMAGES/activity11.png">
-      <h3>Activity 11</h3>
-    </a>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">09</span>
+            <h3>Activity 7</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity7.png" alt="Activity 7">
+            <div class="project-overlay">
+              <a href="https://activity-7-three-theta.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </div>
-</section>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">10</span>
+            <h3>Activity 8</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity8.png" alt="Activity 8">
+            <div class="project-overlay">
+              <a href="https://activity-8-nu.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- BUSINESS -->
-<section id="business">
-  <h2>Business</h2>
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">11</span>
+            <h3>Activity 9</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity9.png" alt="Activity 9">
+            <div class="project-overlay">
+              <a href="https://activity-9-sable.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="grid">
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">12</span>
+            <h3>Activity 10</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity10.png" alt="Activity 10">
+            <div class="project-overlay">
+              <a href="https://activity-10-ecru.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a class="card business-card"
-       href="https://web.facebook.com/profile.php?id=61572116787782"
-       target="_blank">
+      <div class="flip-card project-flip-card">
+        <div class="flip-inner">
+          <div class="flip-front project-flip-front">
+            <span class="project-number">13</span>
+            <h3>Activity 11</h3>
+          </div>
+          <div class="flip-back project-flip-back">
+            <img src="IMAGES/activity11.png" alt="Activity 11">
+            <div class="project-overlay">
+              <a href="https://activity-11-pied.vercel.app" target="_blank" class="flip-link">Visit Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <img src="IMAGES/Facebook page.png">
-      <h3>Facebook Page</h3>
-      <p>Visit our official business page</p>
+    </div>
+  </section>
 
-    </a>
+  <!-- BUSINESS -->
+  <section id="business">
+    <h2>Business</h2>
+    <div class="grid">
 
-  </div>
-</section>
+      <div class="flip-card business-flip-card">
+        <div class="flip-inner">
+          
+          <!-- FRONT: Icon and Title -->
+          <div class="flip-front business-flip-front">
+            <span class="biz-icon"></span>
+            <h3>Facebook Page</h3>
+          </div>
+          
+          <!-- BACK: Image with Overlay Text -->
+          <div class="flip-back business-flip-back">
+            <img src="IMAGES/Facebook page.png" alt="Facebook Page" class="biz-bg-img">
+            <div class="biz-overlay">
+              <p class="biz-desc">Visit our official business Facebook page to stay updated with our latest news and offerings.</p>
+              <a href="https://web.facebook.com/profile.php?id=61572116787782" target="_blank" class="flip-link">Visit Page →</a>
+            </div>
+          </div>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
+        </div>
+      </div>
 
-  <form id="contact-form">
-    <input type="text" name="user_name" placeholder="Your Name" required>
-    <input type="email" name="user_email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+    </div>
+  </section>
 
-  <p id="status"></p>
-</section>
+  <!-- LOCATION -->
+  <section id="location">
+    <h2>My Location</h2>
+    <div class="map-card">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d389.46408055855227!2d123.87919649554843!3d10.297617019553325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99d0068eb670b%3A0x4950cb3712eb77e6!2sO%20and%20m%20boarding%20house!5e0!3m2!1sen!2sph!4v1777910596042!5m2!1sen!2sph"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <a href="https://maps.app.goo.gl/1zRpJepNrS8giG4a8" target="_blank">
+        View on Google Maps
+      </a>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; <span id="year"></span> Zyemon</p>
-</footer>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" name="user_name" placeholder="Your Name" required>
+      <input type="email" name="user_email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="status"></p>
+  </section>
 
-<script src="script.js"></script>
+  <footer>
+    <p>&copy; <span id="year"></span> Zyemon</p>
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

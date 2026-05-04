@@ -1,17 +1,17 @@
-/* ===== RESET ===== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Smooth scrolling */
+/* SMOOTH SCROLL */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
 
-/* ===== BODY ===== */
+/* BASE STYLES */
 body {
   font-family: 'Syne', sans-serif;
   background: radial-gradient(circle at top, #0b1118, #060a0e);
@@ -19,10 +19,11 @@ body {
   line-height: 1.6;
 }
 
-/* ===== NAVIGATION ===== */
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 18px 50px;
   background: rgba(10,15,20,0.85);
   position: fixed;
@@ -34,8 +35,9 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -48,14 +50,14 @@ nav a:hover {
   color: #00f5a0;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section {
   padding: 120px 50px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -74,23 +76,65 @@ section {
   color: #00f5a0;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE IMAGE & HOVER */
 .photo-wrap img {
   width: 260px;
   height: 260px;
   border-radius: 50%;
   border: 4px solid #00f5a0;
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* ===== GRID (ENLARGED LAYOUT) ===== */
+.photo-wrap img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 25px rgba(0, 245, 160, 0.6); 
+}
+
+/* ABOUT SECTION LAYOUT */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; 
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+
+/* ABOUT IMAGE MATCHING HERO DESIGN */
+.about-image img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 4px solid #00f5a0;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 25px rgba(0, 245, 160, 0.6); 
+}
+
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
+  perspective: 1000px;
 }
 
-/* ===== BASE CARD ===== */
+/* BASIC CARD */
 .card {
   background: rgba(17, 24, 32, 0.7);
   border: 1px solid rgba(255,255,255,0.06);
@@ -107,127 +151,45 @@ section {
   border-color: #00f5a0;
 }
 
-/* ===== HOBBIES ===== */
-.hobby h3 {
-  color: #00f5a0;
-}
-
-.hobby p {
-  font-size: 0.8rem;
-  opacity: 0.7;
-  margin-top: 5px;
-}
-
-/* ===== PROJECT CARDS (BIGGER) ===== */
-.project-card {
-  position: relative;
-  overflow: hidden;
-  height: 260px;
+/* MAP CARD */
+.map-card {
+  background: rgba(17, 24, 32, 0.7);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 20px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 0;
+  overflow: hidden;
   transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 245, 160, 0.08);
 }
 
-/* image */
-.project-card img {
-  position: absolute;
-  inset: 0;
+.map-card iframe {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-  transition: 0.4s ease;
+  height: 450px;
+  border: 0;
+  display: block;
 }
 
-/* overlay */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
-  z-index: 1;
+.map-card:hover {
+  transform: translateY(-6px);
+  border-color: #00f5a0;
 }
 
-/* text */
-.project-card h3 {
-  position: relative;
-  z-index: 2;
-  color: #00f5a0;
-  margin-bottom: 14px;
-}
-
-/* hover */
-.project-card:hover {
-  transform: translateY(-10px) scale(1.04);
-}
-
-.project-card:hover img {
-  transform: scale(1.15);
-}
-
-/* ===== BUSINESS CARD (TALLER FEATURED STYLE) ===== */
-.business-card {
-  position: relative;
-  overflow: hidden;
-  height: 340px;
-  border-radius: 20px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 0;
+.map-card a {
+  display: block;
+  padding: 14px;
+  text-align: center;
+  background: #00f5a0;
+  color: #0b1118;
   text-decoration: none;
-  color: white;
+  font-weight: bold;
 }
 
-/* image */
-.business-card img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-  transition: 0.4s ease;
+.map-card a:hover {
+  background: #00c77f;
 }
 
-/* overlay */
-.business-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.25));
-  z-index: 1;
-}
-
-/* text */
-.business-card h3 {
-  position: relative;
-  z-index: 2;
-  color: #00f5a0;
-  margin-bottom: 14px;
-  font-size: 1.1rem;
-}
-
-/* hide description for clean design */
-.business-card p {
-  display: none;
-}
-
-/* hover */
-.business-card:hover {
-  transform: translateY(-12px) scale(1.04);
-}
-
-.business-card:hover img {
-  transform: scale(1.15);
-  filter: brightness(0.75);
-}
-
-/* ===== FORM ===== */
-input, textarea {
+/* FORM ELEMENTS */
+input,
+textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -245,9 +207,305 @@ button {
   border-radius: 8px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
-  opacity: 0.7;
+}
+
+/* FLIP CARDS BASE */
+.hobby-grid {
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 100%;
+  height: 160px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 24, 32, 0.7);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: white;
+}
+
+/* FRONT */
+.flip-front {
+  flex-direction: column;
+  gap: 10px;
+  font-weight: bold;
+  color: #00f5a0;
+}
+
+.flip-icon {
+  font-size: 2rem;
+}
+
+/* BACK */
+.flip-back {
+  transform: rotateX(180deg);
+  font-size: 14px;
+  padding: 18px;
+  text-align: center;
+}
+
+/* EDUCATION CARDS */
+.edu-back {
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  padding: 20px;
+}
+
+.edu-school {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.edu-course {
+  font-size: 13px;
+  color: #c9d8e8;
+}
+
+.edu-year {
+  font-size: 13px;
+  color: #00f5a0;
+  font-weight: 700;
+}
+
+/* SKILLS CARDS */
+.skill-flip-card {
+  height: 200px;
+}
+
+.skill-flip-back {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  gap: 4px;
+}
+
+.skill-flip-back h3 {
+  color: #00f5a0;
+  font-size: 14px;
+}
+
+.skill-flip-back p {
+  font-size: 12px;
+  color: #c9d8e8;
+}
+
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #0b1118;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid #1a2a38;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 30px;
+}
+
+.html { width: 70%; background: #00f5a0; }
+.css  { width: 40%; background: #00c2ff; }
+.js   { width: 30%; background: #ffcc00; }
+.c    { width: 40%; background: #ff4d4d; }
+
+/* PORTFOLIO CARDS */
+.project-flip-card {
+  height: 260px;
+  perspective: 1000px; 
+}
+
+.project-flip-card:hover .flip-inner {
+  transform: rotateX(180deg);
+}
+
+/* PORTFOLIO FRONT */
+.project-flip-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(17, 24, 32, 0.85);
+  border: 1px solid rgba(0, 245, 160, 0.15);
+  padding: 24px;
+  text-align: center;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.project-flip-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00f5a0, transparent);
+  opacity: 0.6;
+}
+
+.project-flip-card:hover .project-flip-front {
+  border-color: rgba(0, 245, 160, 0.4);
+}
+
+.project-number {
+  font-size: 11px;
+  font-weight: 800;
+  color: #00f5a0;
+  opacity: 0.5;
+  letter-spacing: 2px;
+}
+
+.project-flip-front h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.project-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #00f5a0;
+  background: rgba(0, 245, 160, 0.1);
+  border: 1px solid rgba(0, 245, 160, 0.25);
+  padding: 3px 10px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* PORTFOLIO BACK */
+.project-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  padding: 0;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.project-flip-back img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(6, 10, 14, 0.95) 0%,
+    rgba(6, 10, 14, 0.55) 55%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 16px;
+  gap: 10px;
+  z-index: 2;
+}
+
+.project-desc {
+  font-size: 12px;
+  color: #c9d8e8;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* BUSINESS CARDS */
+.business-flip-card {
+  height: 320px;
+}
+
+.business-flip-back {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.biz-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.biz-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 17, 24, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.biz-desc {
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+/* BUTTONS */
+.flip-link {
+  display: inline-block;
+  padding: 9px 22px;
+  background: #00f5a0;
+  color: #0b1118;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.flip-link:hover {
+  background: #00c77f;
+  transform: scale(1.04);
 }
